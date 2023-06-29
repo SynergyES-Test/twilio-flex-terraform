@@ -14,15 +14,16 @@ terraform {
   required_providers {
     twilio = {
       source  = "twilio/twilio"
-      version = ">=0.4.0"
+      version = ">=0.18.25"
     }
+
     twiliorjpearson94 = {
-      source  = "RJPearson94/twilio"
-      version = "0.17.0"
+      source = "RJPearson94/twilio"
+      version = ">=0.23.0"
     }
   }
 
-  required_version = ">= 1.1.0"
+  required_version = ">=1.5.0"
 
   backend "local" {}
 }
