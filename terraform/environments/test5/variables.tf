@@ -1,12 +1,12 @@
 variable "TWILIO_ACCOUNT_SID" {
   type        = string
-  sensitive   = true
+  sensitive   = false
   description = "Twilio Account SID"
 }
 
 variable "TWILIO_API_KEY" {
   type        = string
-  sensitive   = true
+  sensitive   = false
   description = "Twilio API key"
 }
 
@@ -16,3 +16,8 @@ variable "TWILIO_API_SECRET" {
   description = "Twilio API secret"
 }
 
+variable "FLEX_WORKSPACE_SID" {
+  type        = string
+  sensitive   = false
+  description = "Twilio Flex Task Router Workspace SID"
+}
