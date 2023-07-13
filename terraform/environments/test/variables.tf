@@ -15,9 +15,3 @@ variable "TWILIO_API_SECRET" {
   sensitive   = true
   description = "Twilio API secret"
 }
-
-variable "FLEX_WORKSPACE_SID" {
-  type        = string
-  sensitive   = false
-  description = "Twilio Flex Task Router Workspace SID"
-}

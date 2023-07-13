@@ -9,6 +9,6 @@ output "default_workflow" {
 }
 
 output "workspace_name" {
-  value = data.twilio_taskrouter_workspace.flex.friendly_name
+  value = data.twilio_taskrouter_workspaces.flex.workspaces[0].friendly_name
   description = "Friendly name of the workspace"
 }

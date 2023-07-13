@@ -41,7 +41,6 @@ module "ivr_voice" {
 
 module "routing" {
   source = "../../modules/routing"
-  flex_workspace_sid = var.FLEX_WORKSPACE_SID
 }
 
 module "plugin_sample" {
