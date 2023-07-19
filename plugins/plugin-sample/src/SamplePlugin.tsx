@@ -19,8 +19,8 @@ export default class SamplePlugin extends FlexPlugin {
   async init(flex: typeof Flex, manager: Flex.Manager): Promise<void> {
     flex.CRMContainer.defaultProps.uriCallback = (task) => {
       return task
-        ? `https://www.bing.com/search?q=${task.attributes.name}`
-        : "https://www.bing.com"
+        ? `https://www.google.com/search?q=${task.attributes.name}`
+        : "https://www.google.com"
     }
   }
 }

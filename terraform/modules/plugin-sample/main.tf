@@ -54,7 +54,7 @@ resource "twilio_serverless_deployment" "deployment" {
 
 resource "twilio_flex_plugin" "plugin" {
   unique_name = "plugin-sample"
-  version     = "1.0.0"
+  version     = "1.0.1"
   plugin_url  = "https://${twilio_serverless_environment.environment.domain_name}${twilio_serverless_asset.asset.path}" 
 
   lifecycle {
