@@ -41,27 +41,15 @@ More information on the terraform modules is available under their respective di
 ## Setup
 
 0. Install Terraform and create a Twilio Flex account.
-1. Navigate to the terraform directory: `cd terraform/environments/dev`
+1. Navigate to the terraform directory: `cd terraform/environments/test`
 2. Initialize the terraform configuration: `terraform init`
-3. *NOTE REQ: Import existing resources: when you create a Flex account, certain resources are automatically created for you. These are immutable and therefore need to be imported into your terraform state manually.*
-
-    - Start by importing your Taskrouter workspace, with the command:
-    `terraform import module.routing.twilio_taskrouter_workspaces_v1.flex <WORKSPACE_SID>`.
-    
-        You can find the workspace SID in the console, under *Taskrouter > Workspaces > Flex Task Assignment*.
-
-    - Import the voice task channel: 
-    `terraform import module.routing.twilio_taskrouter_workspaces_task_channels_v1.voice <WORKSPACE_SID>/<TASK_CHANNEL_SID>`. 
-
-        The voice task channel sid can be located in the console, under *Taskrouter > Workspaces > Flex Task Assignment > Task Channels > Voice*.
-
-4. Create the execution plan: `terraform plan --out flex.plan`.
-5. Apply the configuration, creating the resources: `terraform apply flex.plan`. Terraform will prompt for the following variables: 
+3. Create the execution plan: `terraform plan --out flex.plan`.
+4. Apply the configuration, creating the resources: `terraform apply flex.plan`. Terraform will prompt for the following variables: 
     - `TWILIO_ACCOUNT_SID` - Account SID to use for deployment
     - `TWILIO_API_KEY` - API key to use for deployment 
     - `TWILIO_API_SECRET` - API secret to use for deployment
     
-    You can also set these as environment variables - when doing so, remember to prefix the variables names with `TF_VAR_`. E.g. `TF_VAR_FLEX_WORKFLOW_SID`.
+    You can also set these as environment variables - when doing so, remember to prefix the variables names with `TF_VAR_`. E.g. `TF_VAR_TWILIO_ACCOUNT_SID`.
 
 Once Terraform deploys the configuration, it will output the following variables:
 - `VOICE_IVR_FLOW`: the name of the Studio flow, used for the IVR (*Voice IVR Flow with Terraform*)
