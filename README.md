@@ -41,7 +41,7 @@ More information on the terraform modules is available under their respective di
 ## Setup
 
 0. Install Terraform and create a Twilio Flex account.
-1. Navigate to the terraform directory: `cd terraform/environments/test`
+1. Navigate to the terraform directory: `cd terraform/environments/dev`
 2. Initialize the terraform configuration: `terraform init`
 3. Create the execution plan: `terraform plan --out flex.plan`.
 4. Apply the configuration, creating the resources: `terraform apply flex.plan`. Terraform will prompt for the following variables: 
